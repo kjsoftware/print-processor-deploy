@@ -14,7 +14,8 @@ services:
         ports:
             - '631:631'
         volumes:
-            - 'print-processor-cups:/var/run/dbus'
+            - 'print-processor-dbus:/var/run/dbus'
+            - 'print-processor-cups:/etc/cups'
         restart: unless-stopped
         networks:
             - print-processor
@@ -33,4 +34,5 @@ networks:
     print-processor:
 
 volumes:
+    print-processor-dbus:
     print-processor-cups:
