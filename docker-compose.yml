@@ -1,0 +1,36 @@
+version: '3'
+services:
+    laravel.fpm:
+        image: ghcr.io/kjsoftware/print-processor-fpm_server
+        container_name: fpm_server
+        env_file:
+          - .env
+        networks:
+            - print-processor
+
+    cups:
+        image: 'olbat/cupsd'
+        container_name: cups
+        ports:
+            - '631:631'
+        volumes:
+            - 'print-processor-cups:/var/run/dbus'
+        restart: unless-stopped
+        networks:
+            - print-processor
+
+    supervisor:
+        image: ghcr.io/kjsoftware/print-processor-supervisor
+        container_name: supervisor
+        env_file:
+          - .env
+        ports:
+            - '80:22'
+        networks:
+            - print-processor
+
+networks:
+    print-processor:
+
+volumes:
+    print-processor-cups:
