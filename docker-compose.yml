@@ -9,7 +9,7 @@ services:
             - print-processor
 
     cups:
-        image: 'olbat/cupsd'
+        image: 'olbat/cupsd:2023-02-10'
         container_name: cups
         ports:
             - '631:631'
