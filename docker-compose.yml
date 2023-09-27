@@ -1,13 +1,5 @@
 version: '3'
 services:
-    laravel.fpm:
-        image: ghcr.io/kjsoftware/print-processor-fpm_server
-        container_name: fpm_server
-        env_file:
-          - .env
-        networks:
-            - print-processor
-
     cups:
         image: 'olbat/cupsd:2023-02-10'
         container_name: cups
