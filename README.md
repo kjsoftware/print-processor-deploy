@@ -39,10 +39,10 @@ Indien het niet mogelijk is om de geautomatiseerde installatie te starten, moete
 2. Zoek het IP-adres van de machine op
 3. Bewerk .env bestand en voer waardes in  
 CUPS_SERVER_IP='Het verkregen IP uit stap 2'  
-RABBITMQ_QUEUE='De queue ontvangen vanuit configuratiegegevens KJ Software'
-RABBITMQ_VHOST='De vhost ontvangen vanuit configuratiegegevens KJ Software'
-RABBITMQ_USER='De gebruikersnaam ontvangen vanuit configuratiegegevens KJ Software'
-RABBITMQ_PASSWORD='Het wachtwoord ontvangen vanuit configuratiegegevens KJ Software'
+RABBITMQ_QUEUE='De queue ontvangen vanuit configuratiegegevens KJ Software'  
+RABBITMQ_VHOST='De vhost ontvangen vanuit configuratiegegevens KJ Software'  
+RABBITMQ_USER='De gebruikersnaam ontvangen vanuit configuratiegegevens KJ Software'  
+RABBITMQ_PASSWORD='Het wachtwoord ontvangen vanuit configuratiegegevens KJ Software'  
 4. Voer commando uit:  
 ```bash
     docker-compose up -d
