@@ -40,6 +40,9 @@ Indien het niet mogelijk is om de geautomatiseerde installatie te starten, moete
 3. Bewerk .env bestand en voer waardes in  
 CUPS_SERVER_IP='Het verkregen IP uit stap 2'  
 RABBITMQ_QUEUE='De queue ontvangen vanuit configuratiegegevens KJ Software'
+RABBITMQ_VHOST='De vhost ontvangen vanuit configuratiegegevens KJ Software'
+RABBITMQ_USER='De gebruikersnaam ontvangen vanuit configuratiegegevens KJ Software'
+RABBITMQ_PASSWORD='Het wachtwoord ontvangen vanuit configuratiegegevens KJ Software'
 4. Voer commando uit:  
 ```bash
     docker-compose up -d
@@ -49,6 +52,12 @@ RABBITMQ_QUEUE='De queue ontvangen vanuit configuratiegegevens KJ Software'
 
 Voer de volgende commando's uit (vanuit de root folder) om de container bij te werken.
 ```bash
+    docker-compose stop
     docker-compose pull
     docker-compose up -d 
 ```
+
+> Tip: Ook al faalt de automatische installatie kun je het bestand alsnog toevoegen aan de opstart van de machine om zo het updaten te automatiseren.
+
+We raden aan om de container dagelijks opnieuw op te starten. Dit kan bijvoorbeeld door een taak in te stellen in Windows Taakplanner.
+Dit zorgt ervoor dat de container altijd up-to-date blijft en eventuele problemen worden opgelost.
