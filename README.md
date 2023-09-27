@@ -1,6 +1,6 @@
 # print-processor-deploy
 
-De print-processor verwert de printopdrachten die vanuit de applicatie worden aangevraagd.
+De print-processor verwerkt de printopdrachten die vanuit de applicatie worden aangevraagd.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ Om de print-processor te kunnen gebruiken, moeten de volgende onderdelen op het 
 - Docker Desktop
 - Git
 
-Daarnaast moet er configuratiegegevens door KJ Software opgestuurd zijn. Mocht je deze nog niet hebben ontvangen, neem dan contact op.
+Daarnaast moeten er configuratiegegevens door KJ Software opgestuurd zijn. Mocht je deze nog niet hebben ontvangen, neem dan contact op.
 
 ## Voorbereiding
 
@@ -30,11 +30,11 @@ Er zal om de configuratiegegevens gevraagd worden.
 Voer het bestand [run.ps1](run.ps1) opnieuw uit in PowerShell.  
 De laatste versie zal opgehaald en uitgevoerd worden.  
 
-> Tip: Voeg het betand toe tijdens het opstarten van de machine, zodat 1. de instantie altijd draait en 2. de instantie altijd up-to-date is.
+> Tip: Voeg het bestand toe tijdens het opstarten van de machine, zodat de instantie altijd draait en de instantie altijd up-to-date is.
 
 ## Installatie (handmatig)
 
-Indien het niet mogelijk is om de geautomatiseerde installatie te starten, moeten de stappen (vooralsnog) handmatig worden gevolgd:
+Indien het niet mogelijk is om de geautomatiseerde installatie te starten, moeten de volgende stappen handmatig gevolgd worden:
 1. Kopieer bestand [.env-example](.env-example) en hernoem naar ".env"
 2. Zoek het IP-adres van de machine op
 3. Bewerk .env bestand en voer waardes in  
