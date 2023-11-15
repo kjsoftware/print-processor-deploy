@@ -1,12 +1,16 @@
 # print-processor-deploy
 
 De print-processor verwerkt de printopdrachten die vanuit de applicatie worden aangevraagd.
+Dit wordt gedaan door gebruik te maken van een CUPS server die opdrachten verwerkt die vanuit de webapplicatie verstuurd worden.
 
 ## Requirements
 
-Om de print-processor te kunnen gebruiken, moeten de volgende onderdelen op het station geïnstalleerd zijn:
-- Docker Desktop
+Om de print-processor te kunnen gebruiken, moeten de volgende onderdelen op de machine geïnstalleerd zijn:
+- Docker
 - Git
+
+Ook is het zo dat de machine waar de print-processor opdraait en printers zelf een statisch IP ingesteld moeten hebben. 
+Dit om problemen te voorkomen waarbij de printers niet meer gevonden kunnen worden.
 
 Daarnaast moeten er configuratiegegevens door KJ Software opgestuurd zijn. Mocht je deze nog niet hebben ontvangen, neem dan contact op.
 
@@ -43,7 +47,7 @@ RABBITMQ_QUEUE='De queue ontvangen vanuit configuratiegegevens KJ Software'
 RABBITMQ_VHOST='De vhost ontvangen vanuit configuratiegegevens KJ Software'  
 RABBITMQ_USER='De gebruikersnaam ontvangen vanuit configuratiegegevens KJ Software'  
 RABBITMQ_PASSWORD='Het wachtwoord ontvangen vanuit configuratiegegevens KJ Software'  
-4. Voer commando uit:  
+4. Voer het commando uit:  
 ```bash
     docker-compose up -d
 ```
@@ -59,5 +63,5 @@ Voer de volgende commando's uit (vanuit de root folder) om de container bij te w
 
 > Tip: Ook al faalt de automatische installatie kun je het bestand alsnog toevoegen aan de opstart van de machine om zo het updaten te automatiseren.
 
-We raden aan om de container dagelijks opnieuw op te starten. Dit kan bijvoorbeeld door een taak in te stellen in Windows Taakplanner.
-Dit zorgt ervoor dat de container altijd up-to-date blijft en eventuele problemen worden opgelost.
+We raden aan om de container dagelijks opnieuw op te starten met de bovenstaande commando's. Dit kan bijvoorbeeld door een taak in te stellen in Windows Taakplanner. Of een script met bovenstaande commando's te draaien op start van de machine
+Dit zorgt ervoor dat de container altijd up-to-date blijft en eventuele (tijdelijke) problemen worden opgelost.
